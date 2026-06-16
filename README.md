@@ -37,7 +37,7 @@ cd ~/.config/nix-config
 ### 2. Apply Darwin configuration
 
 ```bash
-darwin-rebuild switch --flake .#hostname
+sudo darwin-rebuild switch --flake .#hostname
 ```
 
 ### 3. Apply Home Manager configuration
@@ -69,7 +69,7 @@ To update your system after making changes:
 
 ```bash
 # Update system configuration
-darwin-rebuild switch --flake .
+sudo darwin-rebuild switch --flake .
 
 # Update home configuration
 home-manager switch --flake .
