@@ -30,20 +30,22 @@ This repository contains a reproducible, version-controlled setup for macOS syst
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/mirogula/nix.git ~/.config/nix-config
-cd ~/.config/nix-config
+git clone https://github.com/mirogula/nix.git ~/.config/nix
+cd ~/.config/nix
 ```
 
 ### 2. Apply Darwin configuration
 
 ```bash
-sudo darwin-rebuild switch --flake .#hostname
+cd nix-darwin/
+sudo darwin-rebuild switch --flake .
 ```
 
 ### 3. Apply Home Manager configuration
 
 ```bash
-home-manager switch --flake .#username@hostname
+cd home-manager/
+home-manager switch --flake .
 ```
 
 ## Configuration Files
@@ -59,9 +61,9 @@ The `nix-darwin/` directory contains macOS system-level configurations including
 
 The `home-manager/` directory contains user-level configurations including:
 - Shell environment (.zshrc, .bashrc, etc.)
-- Development tools and languages
+- user level packages
 - Application configurations
-- Dotfiles
+- Dotfiles configurations
 
 ## Rebuilding
 
