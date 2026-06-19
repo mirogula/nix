@@ -18,12 +18,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # hello
     # Shells
-    fish
-    nushell
+    # fish
+    # nushell
     neovim
     ripgrep
     # Terminals
@@ -33,7 +30,7 @@
     ghostty-bin
     wezterm
     # SCM
-    git
+    # git
     gh  # github cli
     jujutsu
     gnupg
@@ -47,7 +44,7 @@
     hledger-ui
     lazydocker
 
-    protonvpn-gui
+    proton-vpn
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -103,6 +100,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   programs.fish.enable = true;
+  programs.nushell.enable = true;
   programs.emacs = {
     enable = true;
     # emacs-macport provides deep integration with macOS features (e.g., native emojis, smooth scrolling)

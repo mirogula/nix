@@ -75,15 +75,15 @@
                 taps = [ ];
                 brews = [ 
 		  # "cowsay"
-		  # "mas"
+		  "mas"
 		];
 		casks = [
 		  "docker"
 		];
               };
 	      
-              programs.zsh.enable = true;
-              programs.fish.enable = true;
+              # programs.zsh.enable = true;
+              # programs.fish.enable = true;
             }
           )
         ];
