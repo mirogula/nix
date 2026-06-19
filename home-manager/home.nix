@@ -33,6 +33,8 @@
     # git
     gh  # github cli
     jujutsu
+    lazygit
+
     gnupg
 
     direnv
