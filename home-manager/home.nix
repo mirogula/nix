@@ -18,29 +18,12 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # Shells
-    neovim
-    ripgrep
     # Terminals
     iterm2
-    kitty
     ghostty-bin
-    wezterm
-    # SCM
-    gh  # github cli
-    jujutsu
-    lazygit
-
-    gnupg
-
-    direnv
-    deno
-
-    yazi
 
     hledger
     hledger-ui
-    lazydocker
 
     proton-vpn
 
@@ -99,6 +82,29 @@
   programs.home-manager.enable = true;
   programs.fish.enable = true;
   programs.nushell.enable = true;
+  programs.neovim = {
+    enable = true;
+    withRuby = false;
+    withPython3 = false;
+  };
+  programs.ripgrep-all.enable = true;
+  programs.fzf.enable = true;
+  programs.kitty.enable = true;
+  # programs.ghostty.enable = true;
+  programs.wezterm.enable = true;
+  programs.gh.enable = true;
+  programs.gh-dash.enable = true;
+  programs.jujutsu.enable = true;
+  programs.lazygit.enable = true;
+  programs.lazyworktree.enable = true;
+  programs.gpg.enable = true;
+  programs.direnv.enable = true;
+  programs.yazi = {
+    enable = true;
+    shellWrapperName = "y";
+  };
+  programs.lazydocker.enable = true;
+  programs.lazysql.enable = true;
   programs.emacs = {
     enable = true;
     # emacs-macport provides deep integration with macOS features (e.g., native emojis, smooth scrolling)
