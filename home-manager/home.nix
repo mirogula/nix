@@ -19,18 +19,14 @@
   # environment.
   home.packages = with pkgs; [
     # Shells
-    # fish
-    # nushell
     neovim
     ripgrep
     # Terminals
     iterm2
     kitty
-    #"kitty-0.44.0"
     ghostty-bin
     wezterm
     # SCM
-    # git
     gh  # github cli
     jujutsu
     lazygit
