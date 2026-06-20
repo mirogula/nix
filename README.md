@@ -45,7 +45,7 @@ sudo darwin-rebuild switch --flake .
 
 ```bash
 cd home-manager/
-home-manager switch --flake .
+home-manager switch -b backup --flake .
 ```
 
 ## Configuration Files
@@ -74,7 +74,7 @@ To update your system after making changes:
 sudo darwin-rebuild switch --flake .
 
 # Update home configuration
-home-manager switch --flake .
+home-manager switch -b backup --flake .
 ```
 
 ## Additional Resources
@@ -83,6 +83,7 @@ home-manager switch --flake .
 - [nix-darwin Documentation](https://github.com/LnL7/nix-darwin)
 - [home-manager Manual](https://nix-community.github.io/home-manager/)
 - [NixOS Wiki](https://nixos.wiki/)
+- [list of home-manager Programs](https://nix-community.github.io/home-manager/options/home-manager/programs/index.html)
 
 ## License
 
