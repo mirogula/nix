@@ -18,7 +18,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # Terminals
     iterm2
     ghostty-bin
 
@@ -90,7 +89,6 @@
   programs.ripgrep-all.enable = true;
   programs.fzf.enable = true;
   programs.kitty.enable = true;
-  # programs.ghostty.enable = true;
   programs.wezterm.enable = true;
   programs.gh.enable = true;
   programs.gh-dash.enable = true;
