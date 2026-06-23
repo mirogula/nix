@@ -91,14 +91,25 @@ home-manager switch -b backup --flake .
 sudo determinate-nixd upgrade
 ```
 
-### Upgrade Flakes (apps versions)
+### Update Flakes (apps versions)
 
-Run following command:
 ```
+cd nix-darwin/
+
+# update nix-darwin lockfile
 nix flake update
-```
 
-Then apply system and home-manager changes by [Rebuilding](#rebuilding).
+# Update system configuration
+sudo darwin-rebuild switch --flake .
+
+cd ../home-manager/
+
+# update home-manager lockfile
+nix flake update
+
+# Update home configuration
+home-manager switch -b backup --flake .
+```
 
 ## Misc
 
