@@ -87,7 +87,10 @@
     withPython3 = false;
   };
   programs.ripgrep-all.enable = true;
-  programs.fzf.enable = true;
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+  };
   programs.kitty.enable = true;
   programs.wezterm.enable = true;
   programs.gh.enable = true;
@@ -103,6 +106,8 @@
   };
   programs.lazydocker.enable = true;
   programs.lazysql.enable = true;
+  programs.zoxide.enable = true;
+  programs.fd.enable = true;
   programs.emacs = {
     enable = true;
     # emacs-macport provides deep integration with macOS features (e.g., native emojis, smooth scrolling)
