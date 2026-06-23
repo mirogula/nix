@@ -27,6 +27,12 @@ This repository contains a reproducible, version-controlled setup for macOS syst
 
 ## Quick Start
 
+### 0. Install and configure Determinate Nix and Home Manager
+
+- [Determinate Nix](https://docs.determinate.systems/determinate-nix/)
+- [nix-darwin](https://docs.determinate.systems/guides/nix-darwin/)
+- [HOme Manager (using flakes)](https://home-manager.dev/manual/26.05/index.xhtml#sec-flakes-standalone)
+
 ### 1. Clone the repository
 
 ```bash
@@ -77,13 +83,56 @@ sudo darwin-rebuild switch --flake .
 home-manager switch -b backup --flake .
 ```
 
+## Upgrading/Updating
+
+### Upgrade Determinate Nix
+
+```bash
+sudo determinate-nixd upgrade
+```
+
+### Upgrade Flakes (apps versions)
+
+Run following command:
+```
+nix flake update
+```
+
+Then apply system and home-manager changes by [Rebuilding](#rebuilding).
+
+## Misc
+
+### Ephemeral environments
+
+For trying and experimenting with packages without installing them, the `nix-shell` can be used.
+
+Uase:
+```bash
+nix-shell -p <package1 name> <package2-name> ....
+```
+
+### Log in to Determinate Nix FlakeHub
+
+To have access to FlakeHub flakes.
+
+More details: [Log in to FlakeHub](https://docs.determinate.systems/determinate-nix/determinate-nixd/#login)
+
+ The token expires after some time. To login again, execute following command:
+
+```bash
+determinate-nixd login
+```
+
+
 ## Additional Resources
 
 - [Nix Package Manager](https://nixos.org/)
 - [nix-darwin Documentation](https://github.com/LnL7/nix-darwin)
 - [home-manager Manual](https://nix-community.github.io/home-manager/)
 - [NixOS Wiki](https://nixos.wiki/)
-- [list of home-manager Programs](https://nix-community.github.io/home-manager/options/home-manager/programs/index.html)
+- [List of home-manager Programs](https://nix-community.github.io/home-manager/options/home-manager/programs/index.html)
+- [List of Nix configuration Programs](https://github.com/NixOS/nixpkgs/tree/release-26.05/nixos/modules/programs)
+- [A curated list of the best resources in the Nix community](https://github.com/nix-community/awesome-nix?tab=readme-ov-file)
 
 ## License
 
