@@ -1,3 +1,5 @@
+**Note:** Not actively maintained - latest commit has all the apps/packgages removed (commented out). To see latest active state and continue with usage chek tag: https://github.com/mirogula/nix/tree/v0.1.0.
+
 # Nix Configuration
 
 A declarative system and environment configuration using Nix, [nix-darwin](https://github.com/LnL7/nix-darwin), and [home-manager](https://github.com/nix-community/home-manager).
