@@ -75,10 +75,10 @@
                 taps = [ ];
                 brews = [ 
 		  # "cowsay"
-		  "mas"
+#		  "mas"
 		];
 		casks = [
-		  "docker"
+#		  "docker"
 		];
               };
 	      

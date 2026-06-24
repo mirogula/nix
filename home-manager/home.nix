@@ -18,13 +18,13 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    iterm2
-    ghostty-bin
-
-    hledger
-    hledger-ui
-
-    proton-vpn
+#     iterm2
+#     ghostty-bin
+# 
+#     hledger
+#     hledger-ui
+# 
+#     proton-vpn
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -78,98 +78,100 @@
   };
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-  programs.fish.enable = true;
-  programs.nushell.enable = true;
-  programs.neovim = {
-    enable = true;
-    withRuby = false;
-    withPython3 = false;
-  };
-  programs.ripgrep-all.enable = true;
-  programs.fzf = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-  programs.kitty.enable = true;
-  programs.wezterm.enable = true;
-  programs.gh.enable = true;
-  programs.gh-dash.enable = true;
-  programs.jujutsu.enable = true;
-  programs.lazygit.enable = true;
-  programs.lazyworktree.enable = true;
-  programs.gpg.enable = true;
-  programs.direnv.enable = true;
-  programs.yazi = {
-    enable = true;
-    shellWrapperName = "y";
-  };
-  programs.lazydocker.enable = true;
-  programs.lazysql.enable = true;
-  programs.zoxide.enable = true;
-  programs.fd.enable = true;
-  programs.emacs = {
-    enable = true;
-    # emacs-macport provides deep integration with macOS features (e.g., native emojis, smooth scrolling)
-    package = pkgs.emacs-macport; 
-    
-    # Inject user settings or custom configurations directly into init.el
-    extraConfig = ''
-      (setq inhibit-startup-screen t)
-      (menu-bar-mode -1)
-      (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-      (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-      (load-theme 'modus-vivendi t)
-    '';
-  };
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Miroslav Gula";
-        email = "mirogula@gmail.com";
-        signingKey = "D338E14DE4DBA78B!";
-      };
-      commit.gpgSign = true;
-      tag.gpgSign = true;
-    };
-    includes = [
-      #     {
-      #       condition = "gitdir:~/SCM/personal/";
-      #	contents= {
-      #	 user = {
-      #          name = "Miroslav Gula";
-      #	   email = "mirogula@gmail.com";
-      #	   signingKey = "D338E14DE4DBA78B!";
-      #         };
-      #         commit.gpgSign = true;
-      #	 tag.gpgSign = true;
-      #	};
-      #     }
-      #     {
-      #       condition = "gitdir:~/SCM/open-source/";
-      #	contents= {
-      #	 user = {
-      #          name = "Miroslav Gula";
-      #	   email = "mirogula@gmail.com";
-      #	   signingKey = "D338E14DE4DBA78B!";
-      #         };
-      #         commit.gpgSign = true;
-      #	 tag.gpgSign = true;
-      #	};
-      #     }
-      {
-        condition = "gitdir:~/SCM/work/slovak-telekom/";
-        contents = {
-          user = {
-            name = "Miroslav Gula";
-            email = "miroslav.gula@external.telekom.sk";
-            signingKey = "D3DF8922953F534C";
-          };
-          commit.gpgSign = true;
-          tag.gpgSign = true;
-        };
-      }
-    ];
-  };
-}
+   programs.home-manager.enable = true;
+
+
+#   programs.fish.enable = true;
+#   programs.nushell.enable = true;
+#   programs.neovim = {
+#     enable = true;
+#     withRuby = false;
+#     withPython3 = false;
+#   };
+#   programs.ripgrep-all.enable = true;
+#   programs.fzf = {
+#     enable = true;
+#     enableFishIntegration = true;
+#   };
+#   programs.kitty.enable = true;
+#   programs.wezterm.enable = true;
+#   programs.gh.enable = true;
+#   programs.gh-dash.enable = true;
+#   programs.jujutsu.enable = true;
+#   programs.lazygit.enable = true;
+#   programs.lazyworktree.enable = true;
+#   programs.gpg.enable = true;
+#   programs.direnv.enable = true;
+#   programs.yazi = {
+#     enable = true;
+#     shellWrapperName = "y";
+#   };
+#   programs.lazydocker.enable = true;
+#   programs.lazysql.enable = true;
+#   programs.zoxide.enable = true;
+#   programs.fd.enable = true;
+#   programs.emacs = {
+#     enable = true;
+#     # emacs-macport provides deep integration with macOS features (e.g., native emojis, smooth scrolling)
+#     package = pkgs.emacs-macport; 
+#     
+#     # Inject user settings or custom configurations directly into init.el
+#     extraConfig = ''
+#       (setq inhibit-startup-screen t)
+#       (menu-bar-mode -1)
+#       (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+#       (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+#       (load-theme 'modus-vivendi t)
+#     '';
+#   };
+#   programs.git = {
+#     enable = true;
+#     settings = {
+#       user = {
+#         name = "Miroslav Gula";
+#         email = "mirogula@gmail.com";
+#         signingKey = "D338E14DE4DBA78B!";
+#       };
+#       commit.gpgSign = true;
+#       tag.gpgSign = true;
+#     };
+#     includes = [
+#       #     {
+#       #       condition = "gitdir:~/SCM/personal/";
+#       #	contents= {
+#       #	 user = {
+#       #          name = "Miroslav Gula";
+#       #	   email = "mirogula@gmail.com";
+#       #	   signingKey = "D338E14DE4DBA78B!";
+#       #         };
+#       #         commit.gpgSign = true;
+#       #	 tag.gpgSign = true;
+#       #	};
+#       #     }
+#       #     {
+#       #       condition = "gitdir:~/SCM/open-source/";
+#       #	contents= {
+#       #	 user = {
+#       #          name = "Miroslav Gula";
+#       #	   email = "mirogula@gmail.com";
+#       #	   signingKey = "D338E14DE4DBA78B!";
+#       #         };
+#       #         commit.gpgSign = true;
+#       #	 tag.gpgSign = true;
+#       #	};
+#       #     }
+#       {
+#         condition = "gitdir:~/SCM/work/slovak-telekom/";
+#         contents = {
+#           user = {
+#             name = "Miroslav Gula";
+#             email = "miroslav.gula@external.telekom.sk";
+#             signingKey = "D3DF8922953F534C";
+#           };
+#           commit.gpgSign = true;
+#           tag.gpgSign = true;
+#         };
+#       }
+#     ];
+#   };
+ }
