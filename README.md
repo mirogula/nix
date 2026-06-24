@@ -31,7 +31,7 @@ This repository contains a reproducible, version-controlled setup for macOS syst
 
 - [Determinate Nix](https://docs.determinate.systems/determinate-nix/)
 - [nix-darwin](https://docs.determinate.systems/guides/nix-darwin/)
-- [HOme Manager (using flakes)](https://home-manager.dev/manual/26.05/index.xhtml#sec-flakes-standalone)
+- [Home Manager (using flakes)](https://home-manager.dev/manual/26.05/index.xhtml#sec-flakes-standalone)
 
 ### 1. Clone the repository
 
