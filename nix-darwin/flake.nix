@@ -60,28 +60,28 @@
 
               system.primaryUser = username;
 
-	      # prefer home-manager packages over systemPackages
+              # prefer home-manager packages over systemPackages
               environment.systemPackages = with pkgs;  [
-		# cowsay
+                # cowsay
               ];
 
-	      # NOTE: homebrew has to be already manually installed on the system
-	      # (currently not supported by nix or nix-darwin).
-	      # Follow instructions on: https://brew.sh 
-              homebrew = {
-                enable = true;
-                onActivation.cleanup = "uninstall";
+              # NOTE: homebrew has to be already manually installed on the system
+              # (currently not supported by nix or nix-darwin).
+              # Follow instructions on: https://brew.sh
+#               homebrew = {
+#                 enable = true;
+#                 onActivation.cleanup = "uninstall";
+#
+#                 taps = [ ];
+#                 brews = [
+#                   # "cowsay"
+#                   # "mas"
+#                 ];
+#                 casks = [
+#                   # "docker"
+#                 ];
+#               };
 
-                taps = [ ];
-                brews = [ 
-		  # "cowsay"
-#		  "mas"
-		];
-		casks = [
-#		  "docker"
-		];
-              };
-	      
             }
           )
         ];
