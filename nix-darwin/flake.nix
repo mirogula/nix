@@ -56,9 +56,9 @@
               # Inline nix-darwin configuration
               nix.enable = false;
 
-              security.pam.services.sudo_local.touchIdAuth = true;
-	      
-	      system.primaryUser = username;
+              # security.pam.services.sudo_local.touchIdAuth = true;
+
+              system.primaryUser = username;
 
 	      # prefer home-manager packages over systemPackages
               environment.systemPackages = with pkgs;  [
